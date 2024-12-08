@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts - Moana's Oasis </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="moana/moana.jpg">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<body>
+    <style>
+        .dropdown-trigger {
+            border: none;
+        }
+
+        .dropdown-content {
+            margin-top: 50%;
+            position: absolute;
+            transform: translateY(-55px);
+        }
+
+        .dropdown-content {
+            width: 250px !important;
+        }
+
+        .dropdown-content li {
+            padding: 10px 20px;
+        }
+
+        .nav-wrapper {
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+
+        .brand-logo img {
+            width: 180px;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.5s ease;
+            margin-top: -22px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .brand-logo img:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 1024px) {
+            .brand-logo img {
+                width: 165px;
+                margin-top: -15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .brand-logo img {
+                width: 170px;
+                margin-top: -19px;
+            }
+        }
+
+        @media (max-width: 595px) {
+            .brand-logo img {
+                width: 140px;
+                margin-top: -12px;
+            }
+        }
+
+        .parallax-container {
+            height: 400px;
+        }
+
+        .parallax img {
+            object-fit: cover;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(to top, #032b68, #64b5f6);
+        }
+
+        .gradient-text {
+            font-size: 5rem;
+            font-weight: 1000;
+            background: linear-gradient(to top, #0d47a1, #93ceff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: transform 0.3s, text-shadow 0.3s;
+            cursor: pointer;
+            -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.667);
+            text-shadow: 0 0 3px rgba(255, 255, 255, 0.014);
+        }
+
+        .gradient-text:hover {
+            transform: scale(1.1);
+            text-shadow: 0 4px 10px rgba(100, 181, 246, 0.5);
+        }
+
+        .card:hover {
+          transform: scale(1.05);
+          text-shadow: 0 4px 10px rgba(100, 181, 246, 0.5);
+        }
+    </style>
+
+    <header>
+        <div class="navbar-fixed">
+            <nav class="nav-wrapper white">
+                <ul class="left hide-on-med-and-down">
+                    <li>
+                        <a class="dropdown-trigger btn blue darken-2" href="#" data-target="dropdown1">
+                            <i class="material-icons  center white-text">menu</i>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul id="dropdown1" class="dropdown-content">
+                    <li>
+                        <a href="contact.html" class="blue-text text-darken-4">
+                            <i class="material-icons logo left">contact_mail</i>Contact
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="blue-text text-darken-4">
+                            <i class="material-icons  logo left">login</i>Login
+                        </a>
+                    </li>
+                    <li>
+                        <a href="signup.html" class="blue-text text-darken-4">
+                            <i class="material-icons  logo left">done_all</i>Subscribe
+                        </a>
+                    </li>
+                </ul>
+                <div class="container">
+
+                    <ul class="left hide-on-med-and-down">
+                        <li>
+                            <a href="home.html" class="blue-text text-darken-2" style="font-weight: 500;">
+                                <i class="material-icons left blue-text text-darken-2" style="padding-top: 5px;">home</i>Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="blue-text text-darken-2">
+                                <i class="material-icons left blue-text text-darken-2" style="padding-top: 5px;">info</i>About
+                            </a>
+                        </li>
+                    </ul>
+
+                    <a href="index.html" class="brand-logo center">
+                        <img src="moana/logo.png" alt="Logo" class="responsive-img">
+                    </a>
+
+                    <a href="#" data-target="mobile-menu" class="sidenav-trigger btn blue-text text-darken-2 white">
+                        <i class="material-icons" style="padding-left: 0px;">menu</i>
+                    </a>
+
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a href="menu.html" class="blue-text text-darken-2">
+                                <i class="material-icons left blue-text text-darken-2" style="padding-top: 5px;">restaurant_menu</i>Menu
+                            </a>
+                        </li>
+                        <li>
+                            <a href="events.html" class="blue-text text-darken-2">
+                                <i class="material-icons left blue-text text-darken-2" style="padding-top: 5px;">event</i>Events
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <ul class="sidenav  deep-orange lighten-5" id="mobile-menu">
+            <li>
+                <div class="user-view">
+                    <div class="background">
+                        <img src="moana/as.jpg">
+                    </div>
+                    <a href="#user"><img src="moana/logo.png"></a>
+                </div>
+            </li>
+            <li>
+                <a href="home.html" class="blue-text text-darken-4">
+                    <i class="material-icons left blue-text text-darken-4">home</i>Home
+                </a>
+            </li>
+            <li>
+                <a href="menu.html" class="blue-text text-darken-4">
+                    <i class="material-icons left blue-text text-darken-4">restaurant_menu</i>Menu
+                </a>
+            </li>
+            <li>
+                <a href="about.html" class="blue-text text-darken-4">
+                    <i class="material-icons left blue-text text-darken-4">info</i>About
+                </a>
+            </li>
+            <li>
+                <a href="events.html" class="blue-text text-darken-4">
+                    <i class="material-icons left blue-text text-darken-4">event</i>Events
+                </a>
+            </li>
+            <li>
+                <a href="contact.html" class="blue-text text-darken-4">
+                    <i class="material-icons left blue-text text-darken-4">contact_mail</i>Contact
+                </a>
+            </li>
+            <li>
+                <a href="index.html" class="blue-text text-darken-4">
+                    <i class="material-icons left blue-text text-darken-4">login</i>Login
+                </a>
+            </li>
+            <li>
+                <a href="signup.html" class="blue-text text-darken-4">
+                    <i class="material-icons left blue-text text-darken-4">done_all</i>Subscribe
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <audio autoplay loop>
+        <source src="moana/Know Who You Are (Instrumental).mp3" type="audio/mpeg">
+    </audio>
+
+
+    <section class="bg">
+
+        <div class="container">
+            <h2 class="center-align gradient-text">Send Your Message Across the Ocean!</h2>
+            <div class="row">
+                <div class="col s12 m7 l12">
+                    <div class="card-panel blue lighten-5">
+                        <div class="message-bottle"></div>
+                        <form>
+                            <div class="input-field">
+                                <i class="material-icons prefix blue-text text-darken-3">account_circle</i>
+                                <input type="text" id="name" required>
+                                <label for="name">What shall we call you, adventurer?</label>
+                            </div>
+                            <div class="input-field">
+                                <i class="material-icons prefix blue-text text-darken-3">email</i>
+                                <input type="email" id="email" required>
+                                <label for="email">Where can we send our reply?</label>
+                            </div>
+                            <div class="input-field">
+                                <i class="material-icons prefix blue-text text-darken-3">subject</i>
+                                <select id="subject" required>
+                                    <option value="" disabled selected>Choose your subject</option>
+                                    <option value="movie">Question about the movie</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="merch">Merchandise inquiry</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <i class="material-icons prefix blue-text text-darken-3">chat</i>
+                                <textarea id="message" class="materialize-textarea" required></textarea>
+                                <label for="message">Write your message here, as if casting it into the ocean...</label>
+                            </div>
+
+                            <!-- Centered Button with Icon -->
+                            <div class="center-align">
+                                <button class="btn gradient-bg white-text waves-effect waves-light large" type="submit">
+                                    <i class="material-icons left">send</i> Send Your Message Across the Ocean!
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="container section" id="contact">
+            <h4 class="center-align gradient-text">Contact Information</h4>
+            <div class="row">
+                <div class="col s12 m3 l3">
+                    <div class="card blue darken-4 white-text">
+                        <div class="card-content">
+                            <span class="card-title"><i class="material-icons left">location_on</i> Address</span>
+                            <p>123 Moana's Oasis, Polynesia</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m3 l3">
+                    <div class="card blue darken-4 white-text">
+                        <div class="card-content">
+                            <span class="card-title"><i class="material-icons left">email</i> Email</span>
+                            <p>info@moanasoasis.com</p>
+                            <p>follow to get updates.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m3 l2">
+                    <div class="card blue darken-4 white-text">
+                        <div class="card-content">
+                            <span class="card-title"><i class="material-icons left">phone</i> Phone</span>
+                            <p>+63 123 456 789</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m3 l4">
+                    <div class="card blue darken-4 white-text">
+                        <div class="card-content">
+                            <span class="card-title"><i class="material-icons left">access_time</i> Operating Hours</span>
+                            <p>Monday to Friday: 8 AM - 8 PM</p>
+                            <p>Saturday & Sunday: 9 AM - 9 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m12 l12">
+                <div class="card gradient-bg white-text">
+                    <div class="card-content">
+                        <span class="card-title center"><i class="material-icons">share</i> FOLLOW US</span><br>
+                        <div class="row">
+
+                            <div class="col s4 center">
+                                <div class="card blue darken-4 white-text">
+                                    <div class="card-content">
+                                        <a href="https://www.facebook.com/moanasoasis" class="white-text" target="_blank">
+                                            <i class="fab fa-facebook medium"></i><br>Facebook <br><br>
+                                            <button class="btn white blue-text text-darken-4 waves-effect">Follow</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s4 center">
+                                <div class="card blue darken-4 white-text">
+                                    <div class="card-content">
+                                        <a href="https://www.instagram.com/moanasoasis" class="white-text" target="_blank">
+                                            <i class="fab fa-instagram medium"></i> <br>Instagram <br><br>
+                                            <button class="btn white blue-text text-darken-4 waves-effect">Follow</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s4 center">
+                                <div class="card blue darken-4 white-text">
+                                    <div class="card-content">
+                                        <a href="https://www.twitter.com/moanasoasis" class="white-text" target="_blank">
+                                            <i class="fab fa-twitter medium"></i><br>Twitter<br><br>
+                                            <button class="btn white text-darken-3 blue-text waves-effect">Follow</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col s4 center">
+                                <div class="card blue darken-4 white-text">
+                                    <div class="card-content">
+                                        <a href="https://www.linkedin.com/company/moanasoasis" class="white-text" target="_blank">
+                                            <i class="fab fa-linkedin medium"></i><br>LinkedIn <br><br>
+                                            <button class="btn white text-darken-3 blue-text waves-effect">Follow</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s4 center">
+                                <div class="card blue darken-4 white-text">
+                                    <div class="card-content">
+                                        <a href="https://www.youtube.com/moanasoasis" class="white-text" target="_blank">
+                                            <i class="fab fa-youtube medium"></i><br>YouTube <br><br>
+                                            <button class="btn white text-darken-3 blue-text waves-effect">Follow</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s4 center">
+                                <div class="card blue darken-4 white-text">
+                                    <div class="card-content">
+                                        <a href="https://www.youtube.com/moanasoasis" class="white-text" target="_blank">
+                                            <i class="fab fa-pinterest medium"></i><br>Pinterest <br><br>
+                                            <button class="btn white text-darken-3 blue-text waves-effect">Follow</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container section" id="find-island">
+                <h3 class="center-align gradient-text">Find Moana’s Island</h3>
+
+                <div class="card blue darken-4 white-text">
+                    <div class="card-image">
+                        <img src="moana/download (13).jpg" alt="Map of Moana's Island" class="responsive-img">
+                        <span class="card-title white-text blue darken-2">Discover the Journey</span>
+                    </div>
+
+                    <div class="card-content">
+                        <p class="center-align">
+                            Explore the mystical locations that inspired Moana. Dive into Polynesian culture and mythology to uncover the beauty of these islands.
+                        </p>
+                    </div>
+
+                    <div class="card-action center-align">
+                        <a href="#" class="white-text">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="center-align gradient-text">FAQs</h3>
+            <div class="row">
+                <div class="col s12 m10 l12 offset-m5">
+                    <ul class="collapsible z-depth-1">
+                        <li>
+                            <div class="collapsible-header blue darken-3 white-text">
+                                <i class="material-icons">ondemand_video</i>Where can I stream Moana?
+                            </div>
+                            <div class="collapsible-body blue lighten-5 center">
+                                <span class="center">You can watch it on Disney+!</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header blue darken-3 white-text">
+                                <i class="material-icons">store</i>How can I buy Moana-themed merchandise?
+                            </div>
+                            <div class="collapsible-body blue lighten-5 center">
+                                <span>Visit the Disney Store for official products.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header blue darken-3 white-text">
+                                <i class="material-icons">local_library</i>What inspired the story of Moana?
+                            </div>
+                            <div class="collapsible-body blue lighten-5 center">
+                                <span>Polynesian culture and mythology. Learn more on our Explore page.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header blue darken-3 white-text">
+                                <i class="material-icons">explore</i>Can I visit the locations featured in the movie?
+                            </div>
+                            <div class="collapsible-body blue lighten-5 center">
+                                <span>While Motunui is fictional, many real Polynesian islands served as inspiration.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            </div>
+            </div>
+            </div>
+            </div>
+        </section>
+
+
+
+
+        <section class=" container">
+            <div class="row center-align">
+                <div class="col s4">
+                    <i class="material-icons large blue-text text-darken-4">event</i>
+                    <p class="blue-text text-darken-4">Events</p>
+                </div>
+                <div class="col s4">
+                    <i class="material-icons large blue-text text-darken-4">people</i>
+                    <p class="blue-text text-darken-4">Community</p>
+                </div>
+                <div class="col s4">
+                    <i class="material-icons large blue-text text-darken-4">favorite</i>
+                    <p class="blue-text text-darken-4">Support</p>
+                </div>
+            </div>
+
+
+            <h2 class="center-align gradient-text">RSVP for Events</h2>
+            <div class="row">
+                <form class="col s12">
+                    <div class="input-field col s12 m6">
+                        <i class="material-icons prefix blue-text text-darken-3">person</i>
+                        <input id="name" type="text" class="validate" required>
+                        <label for="name" class="blue-text text-darken-4">Name</label>
+                        <span class="helper-text" data-error="Please enter your name"></span>
+                    </div>
+
+                    <div class="input-field col s12 m6">
+                        <i class="material-icons prefix blue-text text-darken-3">email</i>
+                        <input id="email" type="email" class="validate" required>
+                        <label for="email" class="blue-text text-darken-4">Email</label>
+                        <span class="helper-text" data-error="Please enter a valid email"></span>
+                    </div>
+
+                    <div class="input-field col s12 m6">
+                        <i class="material-icons prefix blue-text text-darken-3">event</i>
+                        <input id="event" type="text" class="validate" required>
+                        <label for="event" class="blue-text text-darken-4">Event Name</label>
+                        <span class="helper-text" data-error="Please enter the event name"></span>
+                    </div>
+
+                    <div class="input-field col s12 m6">
+                        <i class="material-icons prefix blue-text text-darken-3">group</i>
+                        <input id="guests" type="number" class="validate" required>
+                        <label for="guests" class="blue-text text-darken-4">Number of Guests</label>
+                        <span class="helper-text" data-error="Please enter the number of guests"></span>
+                    </div>
+
+                    <div class="center-align">
+                        <button class="btn gradient-bg white-text" type="submit">
+                            <i class="material-icons left">bookmark</i>
+                            Reserve for later
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </section>
+
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="moana/Moana and flowers 💮 (1).jpg" alt="" class="responsive-img">
+        </div>
+    </div>
+    <footer class="page-footer gradient-bg">
+        <div class="container ">
+            <div class="row">
+                <div class="col s12 m6 l5">
+                    <h5>Contact Us</h5>
+                    <strong>Email:</strong>
+                    <a href="mailto:moana.support@disney.com" class="grey-text text-lighten-3">
+                        moana.support@disney.com
+                        <p>Phone: +63 123-456-7890</p>
+                        <strong>Office Address:</strong><br>
+                        123 Ocean Avenue, Manila, Philippines
+                        <strong>Customer Support Hours:</strong><br>
+                        Monday to Friday, 9:00 AM - 6:00 PM (PHT)
+                </div>
+                <div class="col s12 m3">
+                    <h5>Follow Us</h5>
+                    <ul>
+                        <li>
+                            <a href="https://facebook.com/moana" target="_blank" class="grey-text text-lighten-3 underline-link">
+                                <i class="fab fa-facebook"></i> Facebook
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/moana" target="_blank" class="grey-text text-lighten-3 underline-link">
+                                <i class="fab fa-twitter"></i> Twitter
+                            </a>
+                        </li>
+                        <li> <a href="https://instagram.com/moana" target="_blank" class="grey-text text-lighten-3 underline-link">
+                                <i class="fab fa-instagram"></i> Instagram</li>
+                        <li> <a href="https://linkedin.com/company/moana" target="_blank" class="grey-text text-lighten-3 underline-link">
+                                <i class="fab fa-linkedin"></i> LinkedIn</li>
+                        <li> <a href="https://youtube.com/moana" target="_blank" class="grey-text text-lighten-3 underline-link">
+                                <i class="fab fa-youtube"></i> YouTube
+                            </a></li>
+                    </ul>
+                </div>
+                s <div class="col s12 m4">
+                    <h5>Sign Up</h5>
+                    <form>
+                        <div class="input-field">
+                            <i class="material-icons prefix">email</i>
+                            <input type="email" id="email">
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="input-field">
+                            <i class="material-icons prefix">date_range</i>
+                            <input type="text" id="date" class="datepicker">
+                            <label for="date">Choose a date you need me for...</label>
+                            <button class="btn waves-effect waves-light blue">
+                                <a href="signup.html" style="color: white; text-decoration: none;">Subscribe</a>
+                            </button>
+                    </form>
+                </div>
+            </div>
+    </footer>
+    <div class="center-align blue-text text-darken-3">
+        © 2024 Moana Support, All Rights Reserved
+        <br>
+        <a class="blue-text text-darken-3 underline-link" href="#!">Privacy Policy |</a>
+        <a class="blue-text text-darken-3 underline-link" href="#">Terms & Conditions | </a>
+        <a class="blue-text text-darken-3 underline-link " href="#">Regulations</a>
+        </footer>
+
+        <script src="js/jsquery.js"></script>
+        <script src="js/materialize.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.sidenav').sidenav();
+                $('.carousel').carousel();
+                $('.parallax').parallax();
+                $('.tabs').tabs();
+                $('.dropdown-trigger').dropdown();
+                $('.materialboxed').materialbox();
+                $('.collapsible').collapsible();
+            });
+        </script>
+
+</body>
+
+</html>

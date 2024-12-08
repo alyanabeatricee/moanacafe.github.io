@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Moana's Oasis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="moana/moana.jpg">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/css/materialize.min.css">
+    <style>
+        .dropdown-trigger {
+            border: none;
+        }
+
+        .dropdown-content {
+            margin-top: 120px;
+            position: absolute;
+            transform: translateY(-100px);
+        }
+
+        .dropdown-content {
+            width: 250px !important;
+        }
+
+        .dropdown-content li {
+            padding: 10px 20px;
+        }
+
+        .nav-wrapper {
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+
+        .brand-logo img {
+            width: 180px;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.5s ease;
+            margin-top: -22px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 1024px) {
+            .brand-logo img {
+                width: 165px;
+                margin-top: -15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .brand-logo img {
+                width: 170px;
+                margin-top: -19px;
+            }
+        }
+
+        @media (max-width: 595px) {
+            .brand-logo img {
+                width: 140px;
+                margin-top: -12px;
+            }
+        }
+
+        .carousel {
+            height: 500px;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .carousel .carousel-item {
+            height: 100%;
+            width: 20%;
+        }
+
+        .parallax-container {
+            height: 300px;
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        .parallax img {
+            object-fit: cover;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(to top, #032b68, #64b5f6);
+        }
+
+        .gradient-text {
+            font-size: 5rem;
+            font-weight: 1000;
+            background: linear-gradient(to top, #0d47a1, #93ceff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: transform 0.3s, text-shadow 0.3s;
+            cursor: pointer;
+            -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.667);
+            text-shadow: 0 0 3px rgba(255, 255, 255, 0.014);
+        }
+
+        .gradient-text:hover {
+            transform: scale(1.1);
+            text-shadow: 0 4px 10px rgba(100, 181, 246, 0.5);
+        }
+
+        .full-width-img {
+            width: 80%;
+            max-height: 300px;
+            height: auto;
+            display: block;
+            margin-left: 10%;
+        }
+
+        .card-flip {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+
+        .card-container:hover .card-flip {
+            transform: rotateY(180deg);
+        }
+
+        .card-front,
+        .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+
+        .card-front {
+            background: white;
+            z-index: 2;
+        }
+
+        .card-back {
+            background: #1976d2;
+            color: white;
+            transform: rotateY(180deg);
+            padding: 10px;
+            overflow: auto;
+        }
+
+        .card-image img {
+            width: 100%;
+            object-fit: cover;
+            max-height: 100%;
+        }
+
+        .card-title {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .flow-text {
+            font-size: 1rem;
+        }
+
+        .character-img {
+            object-fit: cover;
+            height: 500px;
+            width: 100%;
+        }
+
+        .custom-img {
+            width: 100%;
+            height: auto;
+            max-height: 340px;
+            margin: 0 auto;
+        }
+
+        .nav-content {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            margin-top: 64px;
+        }
+        @media (max-width: 768px) {
+        .nav-content {
+            margin-top: 56px; 
+         }
+
+         .tabs .tab a {
+            font-size: 0.9rem;
+            padding: 0 10px;
+         }
+        }
+
+        @media (max-width: 480px) { 
+        .nav-content {
+            margin-top: 52px; 
+         }
+
+        .tabs .tab a {
+            font-size: 0.8rem; 
+            padding: 0 5px;
+         }
+
+        .tabs .tab a i {
+            display: none; 
+         }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar-fixed z-depth-0">
+            <nav class="nav-wrapper white">
+                <ul class="left hide-on-med-and-down">
+                    <li>
+                        <a class="dropdown-trigger btn blue" href="#" data-target="dropdown1"><i class="material-icons center white-text">menu</i></a>
+                    </li>
+                </ul>
+                <ul id="dropdown1" class="dropdown-content">
+                    <li>
+                        <a href="contact.html" class="blue-text text-darken-4"><i class="material-icons logo left">contact_mail</i>Contact</a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="blue-text text-darken-4"><i class="material-icons logo left">login</i>Login</a>
+                    </li>
+                    <li>
+                        <a href="signup.html" class="blue-text text-darken-4"><i class="material-icons logo left">done_all</i>Subscribe</a>
+                    </li>
+                </ul>
+                <div class="container">
+                    <ul class="left hide-on-med-and-down">
+                        <li>
+                            <a href="home.html" class="blue-text text-darken-2" style="font-weight: 500;"><i class="material-icons left blue-text text-darken-2" style="padding-top: 5px;">home</i>Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="blue-text text-darken-2"><i class="material-icons left blue-text text-darken-2" style="padding-top: 5px;">info</i>About</a>
+                        </li>
+                    </ul><a href="#" class="brand-logo center"><img src="moana/logo.png" alt="Logo" class="responsive-img"></a> <a href="#" data-target="mobile-menu" class="sidenav-trigger blue-text"><i class="material-icons" style="padding-left: 0px;">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a href="menu.html" class="blue-text text-darken-2"><i class="material-icons left blue-text text-darken-2" style="padding-top: 5px;">restaurant_menu</i>Menu</a>
+                        </li>
+                        <li>
+                            <a href="events.html" class="blue-text text-darken-2"><i class="material-icons left blue-text text-darken-2" style="padding-top: 5px;">event</i>Events</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+ </header>
+        <div class="nav-content z-depth-0">
+            <ul class="tabs tabs-transparent grey lighten-5 z-depth-3 center">
+                <li class="tab">
+                    <a href="#story" class="blue-text text-darken-3"><i class="material-icons left" style="padding-top: 10px;">book</i>Story</a>
+                </li>
+                <li class="tab">
+                    <a href="#characters" class="blue-text text-darken-3"><i class="material-icons left" style="padding-top: 10px;">group</i>Main Characters</a>
+                </li>
+                <li class="tab">
+                    <a href="#soundtrack" class="blue-text text-darken-3"><i class="material-icons left" style="padding-top: 10px;">music_note</i>Soundtrack</a>
+                </li>
+            </ul>
+        </div>
+   
+    <ul class="sidenav deep-orange lighten-5" id="mobile-menu">
+        <li>
+            <div class="user-view">
+                <div class="background"><img src="moana/as.jpg" alt="as"></div><a href="#user"><img src="moana/logo.png" alt="logo"></a>
+            </div>
+        </li>
+        <li>
+            <a href="home.html" class="blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">home</i>Home</a>
+        </li>
+        <li>
+            <a href="menu.html" class="blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">restaurant_menu</i>Menu</a>
+        </li>
+        <li>
+            <a href="about.html" class="blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">info</i>About</a>
+        </li>
+        <li>
+            <a href="events.html" class="blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">event</i>Events</a>
+        </li>
+        <li>
+            <a href="contact.html" class="blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">contact_mail</i>Contact</a>
+        </li>
+        <li>
+            <a href="index.html" class="blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">login</i>Login</a>
+        </li>
+        <li>
+            <a href="signup.html" class="blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">done_all</i>Subscribe</a>
+        </li>
+    </ul>
+
+    <audio autoplay="" loop="">
+        <source src="moana/Know%20Who%20You%20Are%20(Instrumental).mp3" type="audio/mpeg">
+    </audio>
+    <div class="parallax-container">
+        <div class="parallax"><img src="moana/bggg%20(2).jpg" alt="bggg%20(2)" class="responsive-img"></div>
+    </div>
+    <section class="bg">
+        <div id="story" class="col s12 tab-content">
+            <section class="container section" id="moanas-story">
+                <div class="row equal-height">
+                    <div class="col s12 m6 l6">
+                        <div class="card">
+                            <div class="card-content">
+                                <h5 class="gradient-text center">Our Story</h5>
+                                <p class="center">Founded in 2015, Moana's Oasis Café was born out of a love for the ocean, the Polynesian culture, and creating memorable coffee experiences. Our mission has always been to bring people together over exceptional coffee, exotic tropical beverages, and heartfelt conversations.</p>
+                            </div>
+                            <div class="card-action center">
+                                <a href="events.html" class="btn waves-effect waves-light blue darken-3 white-text">Go to Events</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l6">
+                        <div class="card img-wrapper"><img src="moana/download%20(8).jpg" alt="Cafe Interior" class="responsive-img materialboxed custom-img"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="card gradient-bg">
+                            <div class="card-content">
+                                <div class="carousel carousel-slider center z-depth-3" data-indicators="true" style="border-radius: 8px; overflow: hidden; height: 500px;">
+                                    <div class="carousel-item"><img src="moana/car.jpg" alt="Interior"></div>
+                                    <div class="carousel-item"><img src="moana/car2.jpg" alt="Signature Drinks"></div>
+                                    <div class="carousel-item"><img src="moana/car3.jpg" alt="Events"></div>
+                                    <div class="carousel-item"><img src="moana/car4.jpg" alt="Events"></div>
+                                    <div class="carousel-item"><img src="moana/car5.jpg" alt="Events"></div>
+                                    <div class="carousel-item"><img src="moana/car6.jpg" alt="Events"></div>
+                                    <div class="carousel-item"><img src="moana/car7.jpg" alt="Events"></div>
+                                    <div class="carousel-item"><img src="moana/car8.jpg" alt="Events"></div>
+                                </div>
+                            </div>
+                            <div class="card-action center">
+                                <a class="btn white blue-text text-darken-3 waves-effect waves-light tooltipped" data-position="top" data-tooltip="Swipe to view more!">Explore Gallery</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="card" style="padding: 8px; margin-bottom: 20px;">
+                            <h5 class="gradient-text center">Our Mission</h5>
+                            <p style="font-size: 1rem; line-height: 1.5;">We strive to deliver exceptional coffee experiences while supporting sustainable practices. From sourcing fair-trade beans to minimizing waste, our commitment is to both quality and the planet.</p>
+                            <div class="center">
+                                <a class="btn blue darken-3 waves-effect waves-light tooltipped" data-position="bottom" data-tooltip="Learn more about our mission!">Discover More</a>
+                            </div>
+                        </div>
+                        <div class="card" style="padding: 5px;">
+                            <h5 class="gradient-text center">Our Values</h5>
+                            <ul class="collection with-header">
+                                <li class="collection-item"><strong>Community-Centric:</strong> Supporting local farmers and artists.</li>
+                                <li class="collection-item"><strong>Sustainability:</strong> 100% compostable packaging and a waste-free initiative.</li>
+                                <li class="collection-item"><strong>Innovation:</strong> Continuously experimenting with unique blends and techniques.</li>
+                            </ul>
+                            <div class="center">
+                                <a class="btn blue darken-3 waves-effect waves-light tooltipped" data-position="bottom" data-tooltip="Learn more about our values!">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="container">
+                <h2 class="center-align gradient-text" style="margin-bottom: 2rem; font-weight: bold;">Our Team</h2>
+                <div class="row">
+                    <div class="col s12 m6 l3">
+                        <div class="card-container">
+                            <div class="card-flip">
+                                <div class="card-front card">
+                                    <div class="card-image"><img src="moana/names%20(2).jpg" alt="Ana, Head Barista" class="character-img" style="height: 200px; object-fit: cover;"></div>
+                                    <div class="card-content center">
+                                        <h6 class="blue-text text-darken-4" style="margin: 10px 0;">Ana - Head Barista</h6>
+                                    </div>
+                                </div>
+                                <div class="card-back card blue darken-3 white-text">
+                                    <div class="card-content">
+                                        <p class="flow-text"><strong>Ana:</strong> With 10+ years of experience in crafting the perfect cup, Ana brings passion to every brew she makes. She is committed to perfecting the art of coffee and inspiring her team to deliver the best.</p>
+                                        <p><strong>Expertise:</strong> Espresso techniques, Latte art, Customer relations.</p>
+                                        <p><strong>Fun Fact:</strong> Ana has a secret recipe for an espresso blend that’s adored by regulars!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l3">
+                        <div class="card-container">
+                            <div class="card-flip">
+                                <div class="card-front card">
+                                    <div class="card-image"><img src="moana/names%20(1).jpg" alt="Alex, Barista" class="character-img" style="height: 200px; object-fit: cover;"></div>
+                                    <div class="card-content center">
+                                        <h6 class="blue-text text-darken-4" style="margin: 10px 0;">Alex - Barista</h6>
+                                    </div>
+                                </div>
+                                <div class="card-back card blue darken-3 white-text">
+                                    <div class="card-content">
+                                        <p class="flow-text"><strong>Alex:</strong> Alex is passionate about making every cup of coffee an experience, paying attention to every detail. He believes that the perfect cup of coffee tells a story.</p>
+                                        <p><strong>Expertise:</strong> Coffee brewing, Flavor profiles, Training new baristas.</p>
+                                        <p><strong>Fun Fact:</strong> Alex loves experimenting with coffee bean origins and creating new blends for the café.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l3">
+                        <div class="card-container">
+                            <div class="card-flip">
+                                <div class="card-front card">
+                                    <div class="card-image"><img src="moana/names%20(4).jpg" alt="Luis, Founder" class="character-img" style="height: 200px; object-fit: cover;"></div>
+                                    <div class="card-content center">
+                                        <h6 class="blue-text text-darken-4">Luis - Founder</h6>
+                                    </div>
+                                </div>
+                                <div class="card-back card blue darken-3 white-text">
+                                    <div class="card-content">
+                                        <p class="flow-text"><strong>Luis:</strong> Luis's vision for Moana's Oasis Café drives the concept of bringing people together over exceptional coffee. He is focused on both the quality of coffee and the community experience.</p>
+                                        <p><strong>Expertise:</strong> Café management, Coffee sourcing, Sustainability initiatives.</p>
+                                        <p><strong>Fun Fact:</strong> Luis has traveled to over 10 countries to meet coffee farmers and learn about sustainable sourcing practices.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l3">
+                        <div class="card-container">
+                            <div class="card-flip">
+                                <div class="card-front card">
+                                    <div class="card-image"><img src="moana/names%20(3).jpg" alt="Maria, Founder" class="character-img" style="height: 200px; object-fit: cover;"></div>
+                                    <div class="card-content center">
+                                        <h6 class="blue-text text-darken-4" style="margin: 10px 0;">Maria - Founder</h6>
+                                    </div>
+                                </div>
+                                <div class="card-back card blue darken-3 white-text">
+                                    <div class="card-content">
+                                        <p class="flow-text"><strong>Maria:</strong> Maria’s dedication to sustainability and community outreach has shaped the café into what it is today. Her work revolves around fostering local relationships and supporting sustainable practices.</p>
+                                        <p><strong>Expertise:</strong> Sustainability, Community outreach, Event planning.</p>
+                                        <p><strong>Fun Fact:</strong> Maria started a composting program at the café to reduce waste and promote eco-friendly habits!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <h5 class="center gradient-text" style="margin-top: 2rem; font-weight: bold;">Café Ambiance</h5>
+                    <p class="center">"Step into a warm, rustic interior designed to make you feel at home. Whether you're here for a quick coffee or a long catch-up, we’ve got the perfect spot waiting for you."</p>
+                </div>
+            </div><img src="moana/crop.jpg" alt="Moana Image" class="full-width-img responsive-img materialboxed">
+            <div class="section">
+                <div class="row">
+                    <div class="col s12">
+                        <h5 class="gradient-text center" style="font-weight: bold;">Awards & Recognitions</h5>
+                    </div>
+                    <div class="col s12 m6">
+                        <ul class="collection with-header z-depth-3" style="border-radius: 8px; margin: 10px;">
+                            <li class="collection-header gradient-bg white-text">
+                                <h6 class="center" style="font-weight: bold; margin: 0; padding: 10px;">National Awards</h6>
+                            </li>
+                            <li class="collection-item">
+                                <i class="material-icons left blue-text text-darken-3">star</i> <strong>Best Coffee Spot in Makati – [Year]</strong>
+                                <p style="margin: 0;">Awarded for exceptional coffee and ambiance.</p>
+                            </li>
+                            <li class="collection-item">
+                                <i class="material-icons left blue-text text-darken-3">emoji_events</i> <strong>Top 10 Artisan Cafés in the Philippines – [Publication]</strong>
+                                <p style="margin: 0;">Recognized for creativity and craftsmanship.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col s12 m6">
+                        <ul class="collection with-header z-depth-3" style="border-radius: 8px; margin: 10px;">
+                            <li class="collection-header gradient-bg white-text">
+                                <h6 class="center" style="font-weight: bold; margin: 0; padding: 10px;">International Recognitions</h6>
+                            </li>
+                            <li class="collection-item">
+                                <i class="material-icons left blue-text text-darken-3">public</i> <strong>Best Eco-Friendly Café – [Global Award]</strong>
+                                <p style="margin: 0;">Honored for sustainability and eco-friendly practices.</p>
+                            </li>
+                            <li class="collection-item">
+                                <i class="material-icons left blue-text text-darken-3">local_cafe</i> <strong>Most Loved Café in Asia – [International Magazine]</strong>
+                                <p style="margin: 0;">Voted by readers for our coffee and community spirit.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg">
+        <div id="characters" class="col s12 tab-content">
+            <section class="container section" id="main-characters">
+                <h5 class="center gradient-text">Main Characters</h5>
+                <div class="row">
+                    <div class="col s12 m6 l3 card-container">
+                        <div class="card-flip z-depth-3">
+                            <div class="card-front">
+                                <div class="card-image"><img src="moana/Moana%202.jpg" alt="Moana" style="height: 250px; object-fit: cover;"></div>
+                                <div class="card-content center">
+                                    <h6 class="blue-text text-darken-4" style="font-weight: bold;">Moana</h6>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h6 class="card-title">Moana</h6>
+                                <p class="flow-text">A fearless young leader who sets out to save her people and discover the secrets of her ancestry.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l3 card-container">
+                        <div class="card-flip z-depth-3">
+                            <div class="card-front">
+                                <div class="card-image"><img src="moana/maui.jpg" alt="Maui" style="height: 250px; object-fit: cover;"></div>
+                                <div class="card-content center">
+                                    <h6 class="blue-text text-darken-4" style="font-weight: bold;">Maui</h6>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h6 class="card-title">Maui</h6>
+                                <p class="flow-text">The charismatic demigod who wields a magical fish hook and teams up with Moana to restore the heart of Te Fiti.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l3 card-container">
+                        <div class="card-flip z-depth-3">
+                            <div class="card-front">
+                                <div class="card-image"><img src="moana/tala.jpg" alt="Tala" style="height: 250px; object-fit: cover;"></div>
+                                <div class="card-content center">
+                                    <h6 class="blue-text text-darken-4" style="font-weight: bold;">Tala</h6>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h6 class="card-title">Tala</h6>
+                                <p class="flow-text">The wise and spirited grandmother who inspires Moana to embrace her destiny as a voyager.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l3 card-container">
+                        <div class="card-flip z-depth-3">
+                            <div class="card-front">
+                                <div class="card-image"><img src="moana/tefiti.jpg" alt="Te Fiti" style="height: 250px; object-fit: cover;"></div>
+                                <div class="card-content center">
+                                    <h6 class="blue-text text-darken-4" style="font-weight: bold;">Te Fiti</h6>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h6 class="card-title">Te Fiti</h6>
+                                <p class="flow-text">The goddess who creates life and whose heart is stolen by Maui, leading to the film’s central conflict.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m6 l3 card-container">
+                        <div class="card-flip z-depth-3">
+                            <div class="card-front">
+                                <div class="card-image"><img src="moana/tomotoa.jpg" alt="Tamatoa" style="height: 250px; object-fit: cover;"></div>
+                                <div class="card-content center">
+                                    <h6 class="blue-text text-darken-4" style="font-weight: bold;">Tamatoa</h6>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h6 class="card-title">Tamatoa</h6>
+                                <p class="flow-text">The giant, treasure-obsessed crab who resides in Lalotai, the Realm of Monsters.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l3 card-container">
+                        <div class="card-flip z-depth-3">
+                            <div class="card-front">
+                                <div class="card-image"><img src="moana/chef.jpg" alt="Chief Tui" style="height: 250px; object-fit: cover;"></div>
+                                <div class="card-content center">
+                                    <h6 class="blue-text text-darken-4" style="font-weight: bold;">Chief Tui</h6>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h6 class="card-title">Chief Tui</h6>
+                                <p class="flow-text">Moana’s overprotective father and the leader of Motunui, who initially opposes her journey.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l3 card-container">
+                        <div class="card-flip z-depth-3">
+                            <div class="card-front">
+                                <div class="card-image"><img src="moana/sina.jpg" alt="Sina" style="height: 250px; object-fit: cover;"></div>
+                                <div class="card-content center">
+                                    <h6 class="blue-text text-darken-4" style="font-weight: bold;">Sina</h6>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h6 class="card-title">Sina</h6>
+                                <p class="flow-text">Moana’s supportive mother, who understands her daughter’s longing to explore the ocean.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l3 card-container">
+                        <div class="card-flip z-depth-3">
+                            <div class="card-front">
+                                <div class="card-image"><img src="moana/heihei.jpg" alt="Hei Hei" style="height: 250px; object-fit: cover;"></div>
+                                <div class="card-content center">
+                                    <h6 class="blue-text text-darken-4" style="font-weight: bold;">Hei Hei</h6>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h6 class="card-title">Hei Hei</h6>
+                                <p class="flow-text">The clueless but lovable rooster who accompanies Moana on her journey across the ocean.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <div id="soundtrack" class="col s12 tab-content">
+        <section class="bg">
+            <div class="container">
+                <section class="spotify">
+                    <h2 class="center-align gradient-text" style="font-weight: bold;">Featured Songs</h2>
+                    <div class="scroll-container row" id="scroll-container">
+                        <div class="col s12 m6 l4">
+                            <div class="card hoverable">
+                                <div class="card-image"><img src="moana/spotify%20(1).jpg" alt="How Far I'll Go" class="responsive-img materialboxed" style="max-height: 300px;"></div>
+                                <div class="card-content center">
+                                    <h6 class="blue-text text-darken-4" style="font-weight: bold;">How Far I'll Go</h6>
+                                    <p>A powerful ballad by Moana as she struggles with her destiny.</p>
+                                </div>
+                                <div class="card-action center">
+                                    <a href="https://open.spotify.com/track/6Xj2eJip22t7cFzQlABZcj" target="_blank" class="btn waves-effect waves-light blue darken-2">Listen Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m6 l4">
+                            <div class="card hoverable">
+                                <div class="card-image"><img src="moana/spotify%20(2).jpg" alt="You're Welcome" class="responsive-img materialboxed" style="max-height: 300px;"></div>
+                                <div class="card-content center">
+                                    <h6 class="blue-text text-darken-4" style="font-weight: bold;">You're Welcome</h6>
+                                    <p>Maui’s catchy and humorous song celebrating his heroic deeds.</p>
+                                </div>
+                                <div class="card-action center">
+                                    <a href="https://open.spotify.com/track/5aRk9g59t8IH8lElHv2Unr" target="_blank" class="btn waves-effect waves-light blue darken-2">Listen Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m6 l4">
+                            <div class="card hoverable">
+                                <div class="card-image"><img src="moana/spotify%20(3).jpg" alt="Shiny" class="responsive-img materialboxed" style="max-height: 300px;"></div>
+                                <div class="card-content center">
+                                    <h6 class="blue-text text-darken-4" style="font-weight: bold;">Shiny</h6>
+                                    <p>Tamatoa’s quirky, self-absorbed anthem filled with comedic flair.</p>
+                                </div>
+                                <div class="card-action center">
+                                    <a href="https://open.spotify.com/track/3NqxKtsoi1cILcby01MWcA" target="_blank" class="btn waves-effect waves-light blue darken-2">Listen Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="collapsible">
+                        <li>
+                            <div class="collapsible-header blue-text text-darken-4">
+                                <i class="material-icons">audiotrack</i> Moana 1 Soundtracks <i class="material-icons right">arrow_drop_down</i>
+                            </div>
+                            <div class="collapsible-body blue lighten-5">
+                                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2BnyvyHc9OVBBU8LlgA4C8?utm_source=generator&amp;theme=0" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                                <div class="row">
+                                    <div class="col s12 m6">
+                                        <div class="card z-depth-3" style="margin: 10px auto;">
+                                            <div class="card-image"><img src="moana/moana%20wallpaper%20(11).jpg" alt="Moana Soundtrack" class="responsive-img materialboxed" style="max-height: 300px;"></div>
+                                            <div class="card-content center">
+                                                <p class="blue-text text-darken-3">Enjoy the iconic soundtrack of Moana! Click to play or explore more songs.</p>
+                                            </div>
+                                            <div class="card-action center">
+                                                <a href="https://open.spotify.com/track/6Xj2eJip22t7cFzQlABZcj" target="_blank" class="btn waves-effect blue darken-3">Listen Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col s12 m6">
+                                        <div class="card z-depth-3" style="margin: 10px auto;">
+                                            <div class="card-image"><img src="moana/moana%20wallpaper%20(12).jpg" alt="Into the Unknown" class="responsive-img materialboxed" style="max-height: 300px;"></div>
+                                            <div class="card-content center">
+                                                <p class="blue-text text-darken-3">A mesmerizing song that captures the spirit of adventure, as Moana pushes the boundaries to find what lies beyond.</p>
+                                            </div>
+                                            <div class="card-action center">
+                                                <a href="https://open.spotify.com/track/3NqxKtsoi1cILcby01MWcA" target="_blank" class="btn waves-effect blue darken-3">Listen Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header blue-text text-darken-4">
+                                <i class="material-icons">audiotrack</i> Moana 2 Soundtracks <i class="material-icons right">arrow_drop_down</i>
+                            </div>
+                            <div class="collapsible-body blue lighten-5">
+                                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2YhhgjB9TychuTpq3vsN9y?utm_source=generator&amp;theme=0" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                                <div class="row">
+                                    <div class="col s12 m6">
+                                        <div class="card z-depth-3" style="margin: 10px auto;">
+                                            <div class="card-image"><img src="moana/22%20(1).jpg" alt="Song 1" class="responsive-img materialboxed" style="max-height: 300px;"></div>
+                                            <div class="card-content center">
+                                                <p class="blue-text text-darken-3">Experience another thrilling adventure with the song "Follow the Horizon" from Moana 2!</p>
+                                            </div>
+                                            <div class="card-action center">
+                                                <a href="https://open.spotify.com/track/example1" target="_blank" class="btn waves-effect blue darken-3">Listen Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col s12 m6">
+                                        <div class="card z-depth-3" style="margin: 10px auto;">
+                                            <div class="card-image"><img src="moana/22%20(2).jpg" alt="Song 2" class="responsive-img materialboxed" style="max-height: 300px;"></div>
+                                            <div class="card-content center">
+                                                <p class="blue-text text-darken-3">Dive deeper into Moana's journey with the track "Beyond the Waves" from Moana 2.</p>
+                                            </div>
+                                            <div class="card-action center">
+                                                <a href="https://open.spotify.com/track/example2" target="_blank" class="btn waves-effect blue darken-3">Listen Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="center-align" style="margin-top: 2rem;">
+                        <a href="https://open.spotify.com/playlist/7xwD468nVxLhkKWMDARoCm?si=e105e523a7da4a5f" target="_blank" class="btn-large waves-effect blue darken-2">Listen to the Full Soundtrack</a>
+                    </div>
+                    <div class="center-align" style="margin-top: 2rem;">
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWYq385h4zLDe?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </div>
+    <footer class="page-footer gradient-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6 l5">
+                    <h5>Contact Us</h5><strong>Email:</strong> <a href="mailto:moana.support@disney.com" class="grey-text text-lighten-3">moana.support@disney.com
+                        <p>Phone: +63 123-456-7890</p><strong>Office Address:</strong><br>
+                        123 Ocean Avenue, Manila, Philippines <strong>Customer Support Hours:</strong><br>
+                        Monday to Friday, 9:00 AM - 6:00 PM (PHT)
+                    </a>
+                </div>
+                <div class="col s12 m3">
+                    <h5>Follow Us</h5>
+                    <ul>
+                        <li>
+                            <a href="https://facebook.com/moana" target="_blank" class="grey-text text-lighten-3 underline-link">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/moana" target="_blank" class="grey-text text-lighten-3 underline-link">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/moana" target="_blank" class="grey-text text-lighten-3 underline-link">Instagram</a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/company/moana" target="_blank" class="grey-text text-lighten-3 underline-link">LinkedIn</a>
+                        </li>
+                        <li>
+                            <a href="https://youtube.com/moana" target="_blank" class="grey-text text-lighten-3 underline-link">YouTube</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col s12 m4">
+                    <h5>Sign Up</h5>
+                    <form>
+                        <div class="input-field">
+                            <i class="material-icons prefix">email</i> <input type="email" id="email"> <label for="email">Your Email</label>
+                        </div>
+                        <div class="input-field">
+                            <i class="material-icons prefix">date_range</i> <input type="text" id="date" class="datepicker"> <label for="date">Choose a date you need me for...</label> <button class="btn waves-effect waves-light blue"><a href="signup.html" style="color: white; text-decoration: none;">Subscribe</a></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="center-align blue-text text-darken-3">
+        © 2024 Moana Support, All Rights Reserved<br>
+        <a class="blue-text text-darken-3 underline-link" href="#!">Privacy Policy |</a> <a class="blue-text text-darken-3 underline-link" href="#">Terms & Conditions |</a> <a class="blue-text text-darken-3 underline-link" href="#">Regulations</a>
+        <script src="js/jsquery.js"></script>
+        <script src="js/materialize.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.sidenav').sidenav();
+                $('.carousel').carousel();
+                $('.parallax').parallax();
+                $('.tabs').tabs();
+                $('.tap-target').tapTarget();
+                $('.dropdown-trigger').dropdown();
+                $('.materialboxed').materialbox();
+                $('.collapsible').collapsible();
+                $('.tooltipped').tooltip();
+            });
+        </script>
+    </div>
+</body>
+
+</html>

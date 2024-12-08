@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Moana's Oasis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="moana/moana.jpg">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/css/materialize.min.css">
+
+    <style>
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        #bg-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+
+        .card-content {
+            width: 100%;
+        }
+
+        .btn {
+            border-radius: 10px;
+            width: 100%;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #ffffff;
+            color: rgb(0, 0, 255);
+            transform: scale(1.05);
+        }
+
+        p {
+            font-size: 13px;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(to top, #032b68, #64b5f6);
+        }
+    </style>
+
+    <div class="video-bg">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="moana/bg2.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m7 offset-m3 l6 offset-l3">
+                <div class="card z-depth-4">
+                    <div class="card-content center-align">
+                        <span class="card-title center-align welcome-title blue-text text-darken-4 text-shadow">Welcome Back!</span>
+                        <p class="center-align blue-text text-darken-4">Login to access your dashboard and explore amazing features!</p>
+                        <form id="login-form">
+                            <!-- Email Input -->
+                            <div class="input-field">
+                                <i class="material-icons prefix blue-text">email</i>
+                                <input type="email" id="email" required>
+                                <label for="email" class="blue-text text-darken-4">Email</label>
+                            </div>
+
+                            <!-- Password Input -->
+                            <div class="input-field">
+                                <i class="material-icons prefix blue-text">lock</i>
+                                <input type="password" id="password" required>
+                                <label for="password" class="blue-text text-darken-4">Password</label>
+                            </div>
+
+                            <!-- Login Button -->
+                            <button class="btn blue darken-5 waves-effect gradient-bg hoverable" type="submit">Log In</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jsquery.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#login-form').submit(function(e) {
+                e.preventDefault();
+                window.location.href = "home.html";
+            });
+            $(".welcome-title").hide().fadeIn(1500).css({
+                "font-size": "2.5rem",
+                "font-weight": "bold",
+                "letter-spacing": "2px"
+            });
+
+            // Add hover effect
+            $(".card").hover(
+                function() {
+                    $(this).addClass("z-depth-3");
+                },
+                function() {
+                    $(this).removeClass("z-depth-3");
+                }
+            );
+        });
+    </script>
+    </body>
+
+</html>

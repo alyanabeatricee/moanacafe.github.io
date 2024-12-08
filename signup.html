@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe - Moana's Oasis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="moana/moana.jpg">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/css/materialize.min.css">
+    <style>
+        .dropdown-trigger {
+            border: none;
+        }
+
+        .dropdown-content {
+            margin-top: 50%;
+            position: absolute;
+            transform: translateY(-55px);
+        }
+
+        .dropdown-content {
+            width: 250px !important;
+        }
+
+        .dropdown-content li {
+            padding: 10px 20px;
+        }
+
+        .nav-wrapper {
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+
+        .brand-logo img {
+            width: 180px;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.5s ease;
+            margin-top: -22px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .brand-logo img:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 1024px) {
+            .brand-logo img {
+                width: 165px;
+                margin-top: -15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .brand-logo img {
+                width: 170px;
+                margin-top: -19px;
+            }
+        }
+
+        @media (max-width: 595px) {
+            .brand-logo img {
+                width: 140px;
+                margin-top: -12px;
+            }
+        }
+
+        .parallax {
+            max-height: 300px;
+            margin-bottom: 50px;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(to top, #032b68, #64b5f6);
+        }
+
+        .gradient-text {
+            font-size: 5rem;
+            font-weight: 1000;
+            background: linear-gradient(to top, #0d47a1, #93ceff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: transform 0.3s, text-shadow 0.3s;
+            cursor: pointer;
+            -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.667);
+            text-shadow: 0 0 3px rgba(255, 255, 255, 0.014);
+        }
+
+        .gradient-text:hover {
+            transform: scale(1.1);
+            text-shadow: 0 4px 10px rgba(100, 181, 246, 0.5);
+        }
+
+        .subscribe-section {
+            padding: 50px 0;
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar-fixed">
+            <nav class="nav-wrapper white">
+                <ul class="left hide-on-med-and-down">
+                    <li>
+                        <a class="dropdown-trigger btn blue darken-2" href="#" data-target="dropdown1"><i class="material-icons center white-text">menu</i></a>
+                    </li>
+                </ul>
+                <ul id="dropdown1" class="dropdown-content">
+                    <li>
+                        <a href="contact.html" class="blue-text text-darken-4"><i class="material-icons logo left">contact_mail</i>Contact</a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="blue-text text-darken-4"><i class="material-icons logo left">login</i>Login</a>
+                    </li>
+                    <li>
+                        <a href="signup.html" class="blue-text text-darken-4"><i class="material-icons logo left">done_all</i>Subscribe</a>
+                    </li>
+                </ul>
+                <div class="container">
+                    <ul class="left hide-on-med-and-down">
+                        <li>
+                            <a href="home.html" class="blue-text text-darken-2" style="font-weight: 500;"><i class="material-icons left blue-text text-darken-2" style="padding-top: 5px;">home</i>Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="blue-text text-darken-2"><i class="material-icons left blue-text text-darken-2" style="padding-top: 5px;">info</i>About</a>
+                        </li>
+                    </ul><a href="index.html" class="brand-logo center"><img src="moana/logo.png" alt="Logo" class="responsive-img"></a> <a href="#" data-target="mobile-menu" class="sidenav-trigger btn blue-text text-darken-2 white"><i class="material-icons" style="padding-left: 0px;">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a href="menu.html" class="blue-text text-darken-2"><i class="material-icons left blue-text text-darken-2" style="padding-top: 5px;">restaurant_menu</i>Menu</a>
+                        </li>
+                        <li>
+                            <a href="events.html" class="blue-text text-darken-2"><i class="material-icons left blue-text text-darken-2" style="padding-top: 5px;">event</i>Events</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <ul class="sidenav deep-orange lighten-5" id="mobile-menu">
+            <li>
+                <div class="user-view">
+                    <div class="background"><img src="moana/as.jpg" alt="as"></div><a href="#user"><img src="moana/logo.png" alt="logo"></a>
+                </div>
+            </li>
+            <li>
+                <a href="home.html" class="blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">home</i>Home</a>
+            </li>
+            <li>
+                <a href="menu.html" class="blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">restaurant_menu</i>Menu</a>
+            </li>
+            <li>
+                <a href="about.html" class="blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">info</i>About</a>
+            </li>
+            <li>
+                <a href="events.html" class="blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">event</i>Events</a>
+            </li>
+            <li>
+                <a href="contact.html" class="blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">contact_mail</i>Contact</a>
+            </li>
+            <li>
+                <a href="index.html" class="blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">login</i>Login</a>
+            </li>
+            <li>
+                <a href="signup.html" class="blue-text text-darken-4"><i class="material-icons left blue-text text-darken-4">done_all</i>Subscribe</a>
+            </li>
+        </ul>
+    </header><audio autoplay="" loop="">
+        <source src="moana/Know%20Who%20You%20Are%20(Instrumental).mp3" type="audio/mpeg">
+    </audio>
+    <section class="bg">
+        <section class="container subscribe-section">
+            <div class="row">
+                <div class="col s12 m10 offset-m1 l8 offset-l2">
+                    <div class="card z-depth-4">
+                        <div class="card-content gradient-bg white-text center-align">
+                            <span class="card-title"><i class="material-icons large">subscriptions</i> Subscribe to Our Moana Club!</span>
+                            <p>Join our ocean-inspired community to receive the latest updates, exclusive offers, and Moana-themed content.</p>
+                        </div>
+                        <div class="card-content">
+                            <form id="subscribeForm" name="subscribeForm">
+                                <div class="input-field">
+                                    <i class="material-icons prefix blue-text text-darken-3">account_circle</i> <input id="name" type="text" class="validate" required=""> <label for="name">Full Name</label>
+                                </div>
+                                <div class="input-field">
+                                    <i class="material-icons prefix blue-text text-darken-3">email</i> <input id="email" type="email" class="validate" required=""> <label for="email">Email Address</label>
+                                </div>
+                                <div class="input-field">
+                                    <i class="material-icons prefix blue-text text-darken-3">favorite</i> <select id="preferences" required="">
+                                        <option value="" disabled selected class="grey-text text-lighten-3">
+                                            Choose your interests
+                                        </option>
+                                        <option value="movies">
+                                            Moana Movies
+                                        </option>
+                                        <option value="culture">
+                                            Polynesian Culture
+                                        </option>
+                                        <option value="merchandise">
+                                            Moana Merchandise
+                                        </option>
+                                        <option value="all">
+                                            All of the above
+                                        </option>
+                                    </select> <label for="preferences">Your Preferences</label>
+                                </div>
+                                <div class="center">
+                                    <button class="btn gradient-bg waves-effect waves-light white-text" type="submit"><i class="material-icons left">send</i> Subscribe Now</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-action center-align">
+                            <p class="blue-text text-darken-3">Already a member?<br>
+                                <a href="index.html" class="btn gradient-bg waves-effect waves-light white-text">Log in here</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <div class="parallax-container">
+        <div class="parallax"><img src="moana/Moana%20and%20flowers%20%F0%9F%92%AE%20(1).jpg" alt="Moana%20and%20flowers%20%F0%9F%92%AE%20(1)" class="responsive-img"></div>
+    </div>
+    <footer class="page-footer gradient-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6 l5">
+                    <h5>Contact Us</h5><strong>Email:</strong> <a href="mailto:moana.support@disney.com" class="grey-text text-lighten-3">moana.support@disney.com
+                        <p>Phone: +63 123-456-7890</p><strong>Office Address:</strong><br>
+                        123 Ocean Avenue, Manila, Philippines <strong>Customer Support Hours:</strong><br>
+                        Monday to Friday, 9:00 AM - 6:00 PM (PHT)
+                    </a>
+                </div>
+                <div class="col s12 m3 l2 push-l3">
+                    <h5>Follow Us</h5>
+                    <ul>
+                        <li>
+                            <a href="https://facebook.com/moana" target="_blank" class="grey-text text-lighten-3 underline-link">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/moana" target="_blank" class="grey-text text-lighten-3 underline-link">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/moana" target="_blank" class="grey-text text-lighten-3 underline-link">Instagram</a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/company/moana" target="_blank" class="grey-text text-lighten-3 underline-link">LinkedIn</a>
+                        </li>
+                        <li>
+                            <a href="https://youtube.com/moana" target="_blank" class="grey-text text-lighten-3 underline-link">YouTube</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="center-align white">
+        © 2024 Moana Support, All Rights Reserved<br>
+        <a class="blue-text underline-link" href="#!">Privacy Policy |</a> <a class="blue-text underline-link" href="#">Terms & Conditions |</a> <a class="blue-text underline-link" href="#">Regulations</a>
+        <script src="js/jsquery.js"></script>
+        <script src="js/materialize.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.sidenav').sidenav();
+                $('.carousel').carousel();
+                $('.parallax').parallax();
+                $('.tabs').tabs();
+                $('.dropdown-trigger').dropdown();
+                $('.materialboxed').materialbox();
+                $('select').formSelect();
+            });
+        </script>
+    </div>
+</body>
+
+</html>
